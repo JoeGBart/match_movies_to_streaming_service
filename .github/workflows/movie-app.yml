@@ -30,7 +30,7 @@ jobs:
         pipenv install --dev
     - name: Format python files with black
       run: |
-        pipenv run black $(git ls-files '*.py')
+        pipenv run black .
     - name: Analysing the code with pylint
       run: |
         pipenv run pylint $(git ls-files '*.py')
